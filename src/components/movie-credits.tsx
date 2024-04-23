@@ -10,18 +10,20 @@ export async function MovieCredits({ id }: { id: string }) {
   const credits = await getCredits(id);
   return (
     <div className={styles.container}>
-      {credits
-        .filter((credit) => credit.profile_path !== null)
-        .map((credit) => (
-          <div key={credit.id}>
+      {credits.map((credit) => (
+        <div key={credit.id}>
+          {credit.profile_path === null ? (
+            <div className={styles.null} />
+          ) : (
             <img src={credit.profile_path} alt={credit.name} />
-            <div>
-              <h3>{credit.name}</h3>
-              <br />
-              <p>{credit.character}</p>
-            </div>
+          )}
+          <div>
+            <h3>{credit.name}</h3>
+            <br />
+            <p>{credit.character}</p>
           </div>
-        ))}
+        </div>
+      ))}
     </div>
   );
 }

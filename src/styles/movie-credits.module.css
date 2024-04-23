@@ -18,3 +18,13 @@
   color: gray;
   font-size: smaller;
 }
+
+.null {
+  display: flex;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: auto 9 / 13.2;
+}
