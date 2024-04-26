@@ -6,7 +6,7 @@
 
 1. 저장소를 클론합니다.
 2. npm install
-3. npm start
+3. npm run dev
 
 ## 핵심 기능
 
