@@ -6,6 +6,10 @@ export const metadata = {
   title: "Home",
 };
 
+/**
+ * API를 통한 영화 정보 리스트
+ * @returns movie info list
+ */
 async function getMovies() {
   // await new Promise((resolve) => setTimeout(resolve, 1000));
   const response = await fetch(API_URL);
